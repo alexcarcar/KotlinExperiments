@@ -52,11 +52,11 @@ fun solveGame(n: Int, m: Int, p: Int, x: Int): Result {
 fun main() {
     val useCases = listOf(
         // Format: (N, M, P, X)
-        Triple(5, 3, 2, 4),   // Case 1: Steve can win
-        Triple(6, 2, 3, 6),   // Case 2: Harvey wins
-        Triple(7, 3, 4, 4),   // Case 3: Already at target → Steve wins
-        Triple(8, 4, 2, 7),   // Case 4: Draw
-        Triple(10, 5, 5, 1)   // Case 5: Steve wins with deep strategy
+        TestData(5, 3, 2, 4),   // Case 1: Steve can win
+        TestData(6, 2, 3, 6),   // Case 2: Harvey wins
+        TestData(7, 3, 4, 4),   // Case 3: Already at target → Steve wins
+        TestData(8, 4, 2, 7),   // Case 4: Draw
+        TestData(10, 5, 5, 1)   // Case 5: Steve wins with deep strategy
     )
 
     for ((index, case) in useCases.withIndex()) {
@@ -65,3 +65,5 @@ fun main() {
         println("Use Case ${index + 1}: N=$n, M=$m, P=$p, X=$x → Result: ${result.name}")
     }
 }
+
+data class TestData(val i: Int, val i2: Int, val i3: Int, val i4: Int)
